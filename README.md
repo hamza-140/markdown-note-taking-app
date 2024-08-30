@@ -40,8 +40,8 @@ Ensure you have the following installed:
 1. Clone the repository:
 
     ```bash
-    git clone <repository-url>
-    cd <repository-folder>
+    git clone https://github.com/hamza-140/markdown-note-taking-app.git
+    cd markdown-note-taking-app
     ```
 
 2. Install the required dependencies:
@@ -53,7 +53,7 @@ Ensure you have the following installed:
 3. Run the server:
 
     ```bash
-    node app.js
+    node index.js
     ```
 
    The application will start listening on port `3000`.
