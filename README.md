@@ -2,7 +2,7 @@
     
   # Markdown File Upload and Rendering Service
   
-  ![alt text](image.png)
+![image](https://github.com/user-attachments/assets/6ea345fa-97f2-420d-bc19-aed006ade357)
   
   [Overview](#🎯-overview) •
   [Features](#✨-features) •
