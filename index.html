@@ -1,19 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <form
-      action="/result"
-      method="post"
-      enctype="multipart/form-data"
-      style="display: flex; flex-direction: column"
-    >
-      <input type="file" name="uploadedFile" />
-      <button type="submit">Upload</button>
+
+<head>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/dist/crayons/crayons.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/dist/crayons/crayons.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="fw-flex fw-flex-column fw-justify-center">
+    <form class="fw-flex fw-flex-column fw-justify-center" enctype="multipart/form-data" id="sample-form"
+      action="/result" method="post">
+      <fw-file-uploader name="uploadedFile" id="file-uploader-2" text="Upload Markdown"
+        description="or drag and drop your markdown file here" hint="File size must be within 5MB" max-file-size="5"
+        accept=".md" multiple="true">
+      </fw-file-uploader>
+      <br />
+      <fw-button type="submit">Upload file</fw-button>
+      <a href="/all">
+        <fw-button color="primary" onclick=""> All Markdowns </fw-button>
+      </a>
+
     </form>
-  </body>
+
+  </div>
+
+  <!-- <form action="/result" method="post" enctype="multipart/form-data" style="display: flex; flex-direction: column">
+    <input type="file" name="uploadedFile" />
+    <button type="submit">Upload</button>
+  </form> -->
+  <script>
+
+  </script>
+</body>
+
 </html>

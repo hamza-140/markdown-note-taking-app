@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script type="module"
+        src="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/dist/crayons/crayons.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/dist/crayons/crayons.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="fw-flex fw-flex-column fw-justify-center">
+        <h1>All Markdowns</h1>
+        <fw-data-table id="datatable" label="Data table 1">
+        </fw-data-table>
+
+    </div>
+
+    <script>
+        fetch('/files')
+            .then(response => response.json())
+            .then(files => {
+                var data = {
+                    columns: [{
+                        "key": "name",
+                        "text": "Name"
+                    }, {
+                        "key": "group",
+                        "text": "Group"
+                    }, {
+                        "key": "role",
+                        "text": "Role"
+                    }],
+                    persons: files
+                };
+
+                var datatable = document.getElementById('datatable');
+                datatable.columns = data.columns;
+                datatable.rows = data.persons;
+            })
+            .catch(error => {
+                console.error('Error fetching files:', error);
+            });
+    </script>
+
+</body>
+
+</html>
